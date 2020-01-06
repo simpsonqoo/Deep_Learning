@@ -3,4 +3,4 @@
 &emsp;&emsp;即為單一數值，以小寫英文字母做表示，e.g. $x$。通常要敘述純量時會加上其值域，e.g. $x \in \Bbb R$
 
 ### 向量(Vector)
-&emsp;&emsp;即為由純量構成的數列(陣列)，會以粗體小寫描述向量，e.g. $\bm x$，而若是要指定$\bm x$中第i個元素，則表示為$\bm x_i$
+&emsp;&emsp;即為由純量構成的數列(陣列)，會以粗體小寫描述向量，e.g. $\boldsymbol x$，而若是要指定$\boldsymbol x$中第i個元素，則表示為$\boldsymbol x_i$
