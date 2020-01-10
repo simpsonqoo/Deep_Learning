@@ -6,11 +6,48 @@
 &emsp;&emsp;即為由純量構成的數列(陣列)，也可以想成是一維陣列，會以粗體小寫描述向量，e.g. $\boldsymbol x$，而若是要指定$\boldsymbol x$中第i個元素，則表示為$\boldsymbol x_i$
 
 ### 矩陣(Matrix)
-&emsp;&emsp;由向量構成的陣列，也可以稱為二維陣列，以大寫粗體字表示，若陣列$\boldsymbol A$高度為m，寬度為n，元素為實數，則可表示為 $\boldsymbol A\in \Bbb R^{m\times n}$。而以下標表示陣列中的元素，第一個下標為水平座標數，第二個下標為鉛直座標數。
+&emsp;&emsp;由向量構成的陣列，也可以稱為二維陣列，以大寫粗體字表示，若陣列$\boldsymbol A$高度為m，寬度為n，元素為實數，則可表示為 $\boldsymbol A\in \Bbb R^{m\times n}$。而以下標表示陣列中的元素，第一個下標為水平座標數，第二個下標為鉛直座標數。若有座標以:表示，則為所有其他指定維度之元素。
 
 e.g.
-$\left[ {\begin{array}{*{20}{c}}
-{{x_{11}}}&{{x_{12}}}\
-{{x_{21}}}&{{x_{22}}}\
-{{x_{31}}}&{{x_{32}}}
-\end{array}} \right]$
+$ \boldsymbol A = \left[\begin{matrix}
+{{x_{11}}} & {{x_{12}}}\\
+{{x_{21}}} & {{x_{22}}}\\
+{{x_{31}}} & {{x_{32}}}
+\end{matrix} \right]$
+
+$\boldsymbol A_{:1}= \left[\begin{matrix}
+{{x_{11}}}\\
+{{x_{21}}}\\
+{{x_{31}}}
+\end{matrix} \right]$
+
+### 張量(tensor)
+&emsp;&emsp;用來泛指所有多維度的陣列，表示方式如矩陣形式，
+
+本篇直接忽略轉置、乘法、加法等運算。
+
+### 點積(dot)
+兩相同維度之向量個元素相乘後相加之動作稱為點積。若做點積之兩向量為$\boldsymbol x,\boldsymbol y$，則點積可表示為$\boldsymbol x^T\boldsymbol y$。
+
+e.g.
+$\boldsymbol x=\left[\begin{matrix}
+{{x_{1}}}\\
+{{x_{2}}}\\
+{{x_{3}}}
+\end{matrix} \right]$,$\boldsymbol y=\left[\begin{matrix}
+{{y_{1}}}\\
+{{y_{2}}}\\
+{{y_{3}}}
+\end{matrix} \right]$
+則$\boldsymbol x^T\boldsymbol y = {x_1}{y_1} + {x_2}{y_2} + {x_3}{y_3}$
+
+由於純量的轉置還是純量，故$\boldsymbol x^T\boldsymbol y=\boldsymbol y^T\boldsymbol x$
+
+線性方程式($\boldsymbol Ax=\boldsymbol b$)、單位矩陣、反矩陣、線性相依、span皆跳過
+
+### 範數(norm)
+範數(norm)中$L^2$ norm可寫成$||\boldsymbol x||$，其平方常以$\boldsymbol x^T\boldsymbol x$表示。而很多時候，使用$L^2$ norm不見得是個好選擇，因為其在零點增加的速度不夠快，在很多種領域的應用中，重要的是區分零或是非零，這種方法比不上使用等速率增長的$L^1$ norm，$L^1$ norm可簡化成
+$$|\boldsymbol x|{|_1}{\rm{ = }}\sum\limits_i {|{x_i}|} $$
+
+如果是想知道長度相關的應用，可使用Fobenius norm
+$$|\boldsymbol A|{|_F} = \sqrt {\sum\limits_{ij} {{A_{ij}}^2} } $$
