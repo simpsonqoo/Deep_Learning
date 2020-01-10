@@ -21,7 +21,7 @@ $\boldsymbol A_{:1}= \left[\begin{matrix}
 {{x_{31}}}
 \end{matrix} \right]$
 
-$\begin{bmatrix}a & b\\c & d\end{bmatrix}$
+$\begin{bmatrix}a & b\\ c & d\end{bmatrix}$
 
 ### 張量(tensor)
 &emsp;&emsp;用來泛指所有多維度的陣列，表示方式如矩陣形式，
